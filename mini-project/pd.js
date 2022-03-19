@@ -71,16 +71,15 @@ for (let postKey in postSelect) {
 }
 postContainer.append(postSel)
 let btnComments = document.createElement('button')
+btnComments.classList.add('btnComments')
 btnComments.innerText = 'Show comments'
 btnComments.onclick = function (){
-    fetch('https://jsonplaceholder.typicode.com/posts/'+postSelect
-
-
-        .id+'/comments')
+    fetch('https://jsonplaceholder.typicode.com/posts/'+postSelect.id+'/comments')
         .then(response => response.json())
         .then(comments => {
             for (let comment of comments) {
                 let commDiv = document.createElement('div')
+                commDiv.classList.add('commDiv')
                 for (let commentKey in comment) {
                     if (commentKey === 'name'){
                         let hName = document.createElement('h4')

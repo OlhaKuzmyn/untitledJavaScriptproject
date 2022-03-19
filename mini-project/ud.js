@@ -137,19 +137,26 @@ for (let selKey in userSelect) {
 sUsers.append(selDiv)
 let btnUserPost = document.createElement('button')
 btnUserPost.innerText = 'Posts of current user'
+btnUserPost.classList.add('btnUserPost')
 selDiv.append(btnUserPost)
 btnUserPost.onclick = function (){
+    let divpostsHolder = document.createElement('div')
+    divpostsHolder.classList.add('divpostsHolder')
+    selDiv.append(divpostsHolder)
     fetch('https://jsonplaceholder.typicode.com/users/'+userSelect.id+'/posts')
         .then(response => response.json())
         .then(posts => {
             for (let post of posts) {
                 let postTitleDiv = document.createElement('div')
-                postTitleDiv.innerText = `${post.title}`
-                selDiv.append(postTitleDiv)
+                divpostsHolder.append(postTitleDiv)
+                let postTitlep = document.createElement('p')
+                postTitlep.innerText = `${post.title}`
+                postTitleDiv.append(postTitlep)
                 btnUserPost.disabled = true
                 let showPostButton = document.createElement('button')
+                showPostButton.classList.add('showPostButton')
                 showPostButton.innerText = 'Show Post'
-                selDiv.append(showPostButton)
+                postTitleDiv.append(showPostButton)
                 showPostButton.onclick = function (){
                     let strPostS = JSON.stringify(post)
                     sessionStorage.setItem('post', strPostS)

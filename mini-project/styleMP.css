@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+.usersHeader {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    color: #020260;
+}
+#usersContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    row-gap: 20px;
+    column-gap: 20px;
+
+}
+.divUser {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #020260;
+    border-radius: 4px;
+    background: #eefcf6;
+    color: #020260;
+
+}
+.divUser > button {
+    margin-bottom: 10px;
+    background: lightblue;
+    color: #030374;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    width: 100px;
+}
+.divUser > button:hover {
+    background: #030374;
+    color: lightblue;
+}
+#selectedUsers {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+#selectedUsers > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #eefcf6;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #020260;
+}
+.btnUserPost {
+    margin-bottom: 10px;
+    background: lightblue;
+    color: #030374;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+}
+.btnUserPost:hover {
+    background: #030374;
+    color: lightblue;
+}
+.showPostButton {
+    margin-bottom: 10px;
+    background: lightblue;
+    color: #030374;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    width: 100px;
+}
+.showPostButton:hover {
+    background: #030374;
+    color: lightblue;
+}
+.divpostsHolder{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 400px
+}
+.divpostsHolder > div {
+    width: 195px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #020260;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+.divpostsHolder > div > p {
+    text-align: center;
+}
+
+#postContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #eefcf6;
+    color: #030374;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+}
+.btnComments {
+    margin-bottom: 10px;
+    background: lightblue;
+    color: #030374;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+}
+.btnComments:hover{
+    background: #030374;
+    color: lightblue;
+}
+.commDiv {
+    width: 400px;
+    margin: 0 auto 10px;
+    border: 1px solid #020260;
+    border-radius: 4px;
+}
